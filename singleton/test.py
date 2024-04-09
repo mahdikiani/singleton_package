@@ -1,5 +1,6 @@
 import unittest
-from singleton.singleton import Singleton
+
+from singleton import Singleton
 
 
 class TestSingleton(unittest.TestCase):
