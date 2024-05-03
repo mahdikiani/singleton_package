@@ -14,7 +14,7 @@ pip install singleton_package
 To use the Singleton metaclass in your classes, simply specify Singleton as the metaclass:
 
 ```python
-from singleton_package import Singleton
+from singleton import Singleton
 
 class MyClass(metaclass=Singleton):
     def __init__(self):
