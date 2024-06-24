@@ -7,8 +7,3 @@ class Singleton(type):
                 *args, **kwargs
             )
         return cls._instances[cls]
-
-
-# Python3
-# class MyClass(BaseClass, metaclass=Singleton):
-#     pass
