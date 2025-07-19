@@ -5,7 +5,6 @@ from singleton import Singleton
 
 class TestSingleton(unittest.TestCase):
     def test_singleton(self):
-
         class IntSingleton(metaclass=Singleton):
             def __init__(self, default=0):
                 self.i = default
