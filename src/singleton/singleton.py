@@ -10,7 +10,7 @@ class Singleton(type):
         return cls._instances[cls]
 
 
-class SingletonABCMeta(ABCMeta):
+class AbstractSingleton(ABCMeta):
     _instances: dict[type, object] = {}
 
     def __call__(cls, *args, **kwargs):

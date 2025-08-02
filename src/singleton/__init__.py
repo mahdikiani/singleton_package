@@ -1,3 +1,3 @@
-from .singleton import Singleton
+from .singleton import AbstractSingleton, Singleton
 
-__all__ = ["Singleton"]
+__all__ = ["Singleton", "AbstractSingleton"]
