@@ -4,9 +4,9 @@ from src.singleton import Singleton
 
 
 class TestSingleton(unittest.TestCase):
-    def test_singleton(self):
+    def test_singleton(self) -> None:
         class IntSingleton(metaclass=Singleton):
-            def __init__(self, default=0):
+            def __init__(self, default: int = 0) -> None:
                 self.i = default
 
         IntSingleton(10)

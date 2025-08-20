@@ -4,16 +4,16 @@ from abc import ABC, abstractmethod
 from src.singleton import AbstractSingleton
 
 
-class AbstractSingleton(ABC, metaclass=AbstractSingleton):
+class TestAbstractSingleton(ABC, metaclass=AbstractSingleton):
     @abstractmethod
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
 
 class TestSingleton(unittest.TestCase):
-    def test_singleton(self):
-        class IntSingleton(AbstractSingleton):
-            def __init__(self, default=0):
+    def test_singleton(self) -> None:
+        class IntSingleton(TestAbstractSingleton):
+            def __init__(self, default: int = 0) -> None:
                 self.i = default
 
         IntSingleton(10)
@@ -27,7 +27,7 @@ class TestSingleton(unittest.TestCase):
         a.i = 100
         self.assertEqual(b.i, 100)
 
-        self.assertRaises(TypeError, AbstractSingleton)
+        self.assertRaises(TypeError, TestAbstractSingleton)
 
 
 if __name__ == "__main__":
